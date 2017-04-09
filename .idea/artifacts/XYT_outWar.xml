@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="XYT:outWar">
+    <output-path>$PROJECT_DIR$/out/artifacts/XYT</output-path>
+    <root id="archive" name="XYT_war.war">
+      <element id="artifact" artifact-name="XYT:war exploded" />
+    </root>
+  </artifact>
+</component>

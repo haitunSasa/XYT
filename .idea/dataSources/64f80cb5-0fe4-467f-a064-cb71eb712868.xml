@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="XYT@139.224.54.233">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="XYT">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="familysleep"/>
+    <schema id="4" parent="1" name="hibernate"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="intelligent_mattress"/>
+    <schema id="7" parent="1" name="knowledge_sharing"/>
+    <schema id="8" parent="1" name="mysql"/>
+    <schema id="9" parent="1" name="remote_ctrl"/>
+    <schema id="10" parent="1" name="remote_diagnoses"/>
+    <schema id="11" parent="1" name="term_table"/>
+    <schema id="12" parent="1" name="test"/>
+    <table id="13" parent="2" name="class_info"/>
+    <table id="14" parent="2" name="class_student"/>
+    <table id="15" parent="2" name="homework_info"/>
+    <table id="16" parent="2" name="homework_student"/>
+    <table id="17" parent="2" name="parent_student"/>
+    <table id="18" parent="2" name="subject_info"/>
+    <table id="19" parent="2" name="teacher_class"/>
+    <table id="20" parent="2" name="teacher_subject"/>
+    <table id="21" parent="2" name="user_info"/>
+    <column id="22" parent="13" name="classId">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="23" parent="13" name="className">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="24" parent="13" name="PRIMARY">
+      <ColNames>classId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="25" parent="14" name="csId">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="14" name="classId">
+      <Position>2</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="14" name="userId">
+      <Position>3</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="28" parent="14" name="PRIMARY">
+      <ColNames>csId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="15" name="homewordId">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="15" name="subjectId">
+      <Position>2</Position>
+      <DataType>int(8)|0</DataType>
+    </column>
+    <column id="31" parent="15" name="title">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="32" parent="15" name="content">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="33" parent="15" name="assignTime">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="34" parent="15" name="plantime">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="35" parent="15" name="classId">
+      <Position>7</Position>
+      <DataType>int(8)|0</DataType>
+    </column>
+    <column id="36" parent="15" name="teacherId">
+      <Position>8</Position>
+      <DataType>int(8)|0</DataType>
+    </column>
+    <key id="37" parent="15" name="PRIMARY">
+      <ColNames>homewordId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="16" name="hsId">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="16" name="homeworkId">
+      <Position>2</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="16" name="userId">
+      <Position>3</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="16" name="isFinishied">
+      <Position>4</Position>
+      <Comment>0-未完成；1-完成</Comment>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="42" parent="16" name="FinishTime">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="43" parent="16" name="isChangeTime">
+      <Position>6</Position>
+      <Comment>0-未修改；1-修改</Comment>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="44" parent="16" name="ChangeTime">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="45" parent="16" name="IsSignend">
+      <Position>8</Position>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <column id="46" parent="16" name="signParent">
+      <Position>9</Position>
+      <DataType>int(8)|0</DataType>
+    </column>
+    <key id="47" parent="16" name="PRIMARY">
+      <ColNames>hsId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="48" parent="17" name="psId">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="17" name="parentId">
+      <Position>2</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="17" name="studentId">
+      <Position>3</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="51" parent="17" name="PRIMARY">
+      <ColNames>psId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="52" parent="18" name="subjectId">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="18" name="subjectName">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <key id="54" parent="18" name="PRIMARY">
+      <ColNames>subjectId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="19" name="tcId">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="19" name="userId">
+      <Position>2</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="19" name="classId">
+      <Position>3</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="58" parent="19" name="PRIMARY">
+      <ColNames>tcId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="59" parent="20" name="tsId">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="20" name="userId">
+      <Position>2</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="20" name="subjectId">
+      <Position>3</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="62" parent="20" name="PRIMARY">
+      <ColNames>tsId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="63" parent="21" name="userId">
+      <Position>1</Position>
+      <DataType>int(8)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="64" parent="21" name="userName">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="21" name="password">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="66" parent="21" name="userImg">
+      <Position>4</Position>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="67" parent="21" name="regTime">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+    </column>
+    <column id="68" parent="21" name="userRole">
+      <Position>6</Position>
+      <Comment>0-老师;1-家长;2-学生；</Comment>
+      <DataType>tinyint(2)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;2&apos;</DefaultExpression>
+    </column>
+    <key id="69" parent="21" name="PRIMARY">
+      <ColNames>userId</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

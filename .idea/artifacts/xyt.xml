@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="xyt">
+    <output-path>$PROJECT_DIR$/out/artifacts/xyt</output-path>
+    <root id="archive" name="xyt.war">
+      <element id="dir-copy" path="$PROJECT_DIR$/webapp" />
+    </root>
+  </artifact>
+</component>
